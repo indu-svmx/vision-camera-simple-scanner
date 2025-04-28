@@ -27,11 +27,7 @@ export const computeHighlights = (
      * "landscape-right" -> "portrait-upside-down"
      */
     // @NOTE destructure the object to make sure we don't hold a reference to the original layout
-    adjustedLayout = [
-      'landscape-left',
-      'portrait',
-      'portrait-upside-down',
-    ].includes(frame.orientation)
+    adjustedLayout = ['landscape-left'].includes(frame.orientation)
       ? {
           width: layout.height,
           height: layout.width,
